@@ -214,7 +214,7 @@ static void drawingTopScreen(float iod)
 
 	drawingSetMode(DRAW_MODE_DRAWING);
 	drawingSetZ(0.0f);
-	textSetColor(0xFFFFFFFF);
+	textSetColor(0xFFcec8c8);
 	//textDraw(8.0f, 32.0f, 0.5f, 0.5f, true, debugText);
 
 	// Draw fade
@@ -245,7 +245,7 @@ static void drawingBottomScreen(void)
 		drawingSetMode(DRAW_MODE_DRAWING);
 		drawingSetZ(0.0f);
 
-		drawingWithColor(0x80FFFFFF);
+		drawingWithColor(0x80cec8c8);
 		drawingDrawQuad(0.0f, 80.0f, 320.0f, 100.0f);
 
 		for (i = 0; i < 8; i ++)
@@ -253,11 +253,11 @@ static void drawingBottomScreen(void)
 			float angle = ((float)i/8.0f + counter)*M_TAU;
 			float x = 320.0f/2 + 24*cosf(angle);
 			float y = 240.0f/2 + 24*sinf(angle);
-			drawingDrawImage(images_loading_idx, 0xFFFFFFFF, x-4, y-4);
+			drawingDrawImage(images_loading_idx, 0xFFcec8c8, x-4, y-4);
 		}
 		counter += g_drawFrames*0.5f/60;
 
-		textSetColor(0xFF000000); // black
+		textSetColor(0xFFcec8c8); // black
 		textDrawInBox(textGetString(StrId_Loading), 0, 0.5f, 0.5f, 170.f, 0.0f, 320.0f);
 	}
 
