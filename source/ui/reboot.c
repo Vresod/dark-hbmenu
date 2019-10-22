@@ -55,6 +55,6 @@ void rebootDrawBot(void)
 	drawingSubmitPrim(GPU_TRIANGLE_STRIP, 4);
 
 	//textSetColor(0xFF767676);
-	textSetColor(0xFF545454);
+	textSetColor(0xFFa3a3a3);
 	textDraw(8.0f, 60.0f+8.0f, 0.6f, 0.6f, false, textGetString(launchHomeMenuEnabled() ? StrId_ReturnToHome : StrId_Reboot));
 }

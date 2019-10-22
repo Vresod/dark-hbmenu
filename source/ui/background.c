@@ -169,7 +169,7 @@ void backgroundDrawTop(float iod)
 	// Draw HUD
 	drawingSetZ(0.5f);
 
-	textSetColor(0xFFFFFFFF);
+	textSetColor(0xFFa3a3a3);
 	textDrawInBox(timeString, 0, 0.5f, 0.5f, 15.0f, 0.0f, 400.0f);
 	textDrawInBox(versionString, 1, 0.5f, 0.5f, 200.0f, 80.0f, 80.0f+271-10);
 #ifdef DBGSTRING

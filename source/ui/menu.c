@@ -184,11 +184,11 @@ void menuDrawTop(float iod)
 	drawingSetMode(DRAW_MODE_DRAWING);
 	drawingSetZ(0.4f);
 
-	drawingWithColor(0x60FFFFFF);
+	drawingWithColor(0x604c4c4c);
 	drawingDrawQuad(0.0f, 240-24.0f, 400.0f, 24.0f);
 	drawingSubmitPrim(GPU_TRIANGLE_STRIP, 4);
 
-	textSetColor(0xFF545454);
+	textSetColor(0xFFa3a3a3);
 	textDrawInBox(menu->dirname, 0, 0.5f, 0.5f, 240.0f-8, 8.0f, 400-8.0f);
 }
 
@@ -220,7 +220,7 @@ float menuDrawEntry(menuEntry_s* me, float x, float y, bool selected)
 	else
 		drawingDrawImage(images_defaultIcon_idx, 0xFFFFFFFF, x+8, y+8);
 
-	textSetColor(0xFF545454);
+	textSetColor(0xFFa3a3a3);
 	textDrawInBox(me->name, -1, 0.5f, 0.5f, y+20, x+66, x+bubbleWidth-8);
 	textDrawInBox(me->description, -1, 0.4f, 0.4f, y+35, x+66+4, x+bubbleWidth-8);
 	textDrawInBox(me->author, 1, 0.4f, 0.4f, y+bubbleHeight-6, x+66, x+bubbleWidth-8);
@@ -250,11 +250,11 @@ void menuDrawBot(void)
 
 	if (menu->nEntries==0)
 	{
-		drawingWithColor(0x80FFFFFF);
+		drawingWithColor(0x804c4c4c);
 		drawingDrawQuad(0.0f, 60.0f, 320.0f, 120.0f);
 		drawingSubmitPrim(GPU_TRIANGLE_STRIP, 4);
 
-		textSetColor(0xFF545454);
+		textSetColor(0xFFa3a3a3);
 		textDrawInBox(textGetString(StrId_NoAppsFound_Title), 0, 0.75f, 0.75f, 60.0f+25.0f, 8.0f, 320-8.0f);
 		textDraw(8.0f, 60.0f+25.0f+8.0f, 0.5f, 0.5f, false, textGetString(StrId_NoAppsFound_Msg));
 	} else
